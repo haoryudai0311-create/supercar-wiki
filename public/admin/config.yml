@@ -1,0 +1,17 @@
+backend:
+  name: git-gateway
+media_folder: "public/img"
+public_folder: "/img"
+
+collections:
+  - name: "cars"
+    label: "Cars"
+    folder: "data/cars"
+    create: true
+    slug: "{{year}}-{{slug}}"
+    fields:
+      - { label: "Name",   name: "name",     widget: "string" }
+      - { label: "Maker",  name: "maker",    widget: "string" }
+      - { label: "Year",   name: "year",     widget: "number" }
+      - { label: "Image",  name: "imgUrl",   widget: "image" }
+      - { label: "Concept",name: "concept",  widget: "text"  }
